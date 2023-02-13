@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/style/problem.css">
+  <link rel="stylesheet" type="text/css" href="/style/index.css">
+  <link rel="stylesheet" type="text/css" href="/style/problem.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/styles/default.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-    <h1 class="title">Problem 1</h1>
+  <button class="back-button" onclick="location.href='/problem'">Back to problems</button>
+  <header>
+    <h1 style="text-align: center;">Is this Javascript?</h1>
+  </header>
+  <pre><code class="javascript" style="font-size:24px; background-color: black; color: white; width: 100%;">
+    $=~[];$={___:++$,$$$$:(![]+"")[$],__$:++$,$_$_:(![]+"")[$],_$_:++$,$_$$:({}+"")[$],$$_$:($[$]+"")[$],_$$:++$,$$$_:(!""+"")[$],
+    $__:++$,$_$:++$,$$__:({}+"")[$],$$_:++$,$$$:++$,$___:++$,$__$:++$};$.$_=($.$_=$+"")[$.$_$]+($._$=$.$_[$.__$])+($.$$=($.$+"")
+    [$.__$])+((!$)+"")[$._$$]+($.__=$.$_[$.$$_])+($.$=(!""+"")[$.__$])+($._=(!""+"")[$._$_])+$.$_[$.$_$]+$.__+$._$+$.$;$.$$=$.$+
+    (!""+"")[$._$$]+$.__+$._+$.$+$.$$;$.$=($.___)[$.$_][$.$_];$.$($.$($.$$+"\""+$.$_$_+(![]+"")[$._$_]+$.$$$_+"\\"+$.__$+$.$$_+
+    $._$_+$.__+"(\\\""+$.$___+$._$+"\\"+$.__$+$.$$_+$.___+$.$__$+$.$_$_+"\\\");"+"\"")())();
+
+
+
+
+
+
+
+
+
+  </code></pre>
+  <form action="/problem/check" method="post">
+    <input type="hidden" name="number" value="2">
+    <div class="input-container">
+      <input class="input-letter" name="a" maxlength="1">
+      <input class="input-letter" name="b" maxlength="1">
+      <input class="input-letter" name="c" maxlength="1">
+      <input class="input-letter" name="d" maxlength="1">
+      <input class="input-letter" name="e" maxlength="1">
+      <input type="submit" value="SEND">
+    </div>
+  </form>
+  
+  
 
 </body>
 </html>
