@@ -38,13 +38,18 @@ router.post("/check", (req,res) => {
         res.sendFile(path.join(__dirname, `../views/corrects/${problem_num}.html`))
       }
       else{
-        console.log("asss");
         res.redirect(`/problem/${problem_num}`);
       }
     }
   else if(problem_num == 4) {
-
-  }
+    let guess = answer.a.toUpperCase() + answer.b.toUpperCase() + answer.c.toUpperCase() + answer.d.toUpperCase() + answer.e.toUpperCase();
+      if(guess === '8OP9A'){
+        res.sendFile(path.join(__dirname, `../views/corrects/${problem_num}.html`))
+      }
+      else{
+        res.redirect(`/problem/${problem_num}`);
+      }
+    }
 });
 
 
