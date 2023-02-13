@@ -32,6 +32,19 @@ router.post("/check", (req,res) => {
         res.redirect(`/problem/${problem_num}`);
       }
     }
+  else if(problem_num == 3) {
+    let guess = answer.a.toUpperCase() + answer.b.toUpperCase() + answer.c.toUpperCase() + answer.d.toUpperCase();
+      if(guess === '9GU8'){
+        res.sendFile(path.join(__dirname, `../views/corrects/${problem_num}.html`))
+      }
+      else{
+        console.log("asss");
+        res.redirect(`/problem/${problem_num}`);
+      }
+    }
+  else if(problem_num == 4) {
+
+  }
 });
 
 
