@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .island {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        display: inline-block;
+        position: relative;
+      }
+
+      .boat {
+        width: 100px;
+        height: 50px;
+        background-color: brown;
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+      }
+
+      .animal {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 50px;
+        left: 75px;
+      }
+
+      .sheep {
+        background-color: blue;
+      }
+
+      .wolf {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="left-island" style="float: left; width: 200px; height: 200px; background-color: green; position: absolute; bottom: 0;">
+      <div class="animal sheep" draggable="true"></div>
+      <div class="animal sheep" draggable="true"></div>
+      <div class="animal wolf" draggable="true"></div>
+      <div class="animal wolf" draggable="true"></div>
+      <div class="animal wolf" draggable="true"></div>
+    </div>
+    <div class="boat" style="float: left; width: 100px; height: 100px; background-color: brown; position: absolute; bottom: 50px; left: 200px;"></div>
+    <div id="right-island" style="float: right; width: 200px; height: 200px; background-color: green; position: absolute; bottom: 0; left: 800px;"></div>
+    <script>
+      const leftIsland = document.getElementById("left-island");
+      const rightIsland = document.getElementById("right-island");
+      const boat = document.querySelector(".boat");
+    
+      let boatLocation = "left";
+      let sheepOnBoat = 0;
+      let wolfOnBoat = 0;
+    
+      boat.addEventListener("click", function () {
+        if (sheepOnBoat === 0 && wolfOnBoat === 0) {
+          return;
+        }
+        if (boatLocation === "left") {
+          sheepOnBoat = 0;
+          wolfOnBoat = 0;
+          let sheepOnRight = rightIsland.querySelectorAll(".sheep").length;
+          let wolfOnRight = rightIsland.querySelectorAll(".wolf").length;
+          if (wolfOnRight > sheepOnRight) {
+            alert("fail");
+          }
+        } else {
+          let sheepOnLeft = leftIsland.querySelectorAll(".sheep").length;
+          let wolfOnLeft = leftIsland.querySelectorAll(".wolf").length;
+          if (wolfOnLeft > sheepOnLeft) {
+            alert("fail");
+          }
+        }
+        boatLocation = boatLocation === "left" ? "right" : "left";
+      });
+    
+      leftIsland.addEventListener("dragstart", function (event) {
+        event.dataTransfer.setData("text", event.target.id);
+      });
+    
+      rightIsland.addEventListener("dragstart", function (event) {
+        event.dataTransfer.setData("text", event.target.id);
+      });
+    
+      boat.addEventListener("dragover", function (event) {
+        event.preventDefault();
+      });
+    
+      boat.addEventListener("drop", function (event) {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        const animal = document.getElementById(data);
+        if (animal.classList.contains("sheep")) {
+          if (sheepOnBoat < 2 && wolfOnBoat === 0) {
+            sheepOnBoat++;
+            animal.remove();
+            boat.appendChild(animal);
+          }
+        }
+        if (animal.classList.contains("wolf")) {
+          if (wolfOnBoat < 2 && sheepOnBoat === 0) {
+            wolfOnBoat++;
+            animal.remove();
+            boat.appendChild(animal);
+          }
+        }
+      });
+    </script>
+    
+    
+  </body>
+</html>

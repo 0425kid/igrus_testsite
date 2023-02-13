@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style/index.css">
+  <link rel="stylesheet" type="text/css" href="/style/problem.css">
+</head>
+<body>
+  <button class="back-button" onclick="location.href='/problem'">Back to problems</button>
+  <header>
+    <h1 style="text-align: center;">Problem 1</h1>
+  </header>
+  <div class="logo-container">
+    <img class="logo" src="/images/cpp.png">
+    <img class="logo" src="/images/java.png">
+    <img class="logo" src="/images/python.png">
+    <img class="logo" src="/images/js.png">
+  </div>
+  <form action="/problem/check" method="post">
+    <input type="hidden" name="number" value="1">
+    <div class="input-container">
+      <input class="input-letter" name="a" maxlength="1">
+      <input class="input-letter" name="b" maxlength="1">
+      <input class="input-letter" name="c" maxlength="1">
+      <input class="input-letter" name="d" maxlength="1">
+      <input type="submit" value="SEND">
+    </div>
+  </form>
+  
+  
+
+</body>
+</html>

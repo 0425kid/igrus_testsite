@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style/index.css">
+  <link rel="stylesheet" type="text/css" href="/style/problem.css">
+</head>
+<body>
+  <button class="back-button" onclick="location.href='/'">Back to code</button>
+  <div class="buttons-container">
+    <button onclick="location.href='/problem/1'">Problem 1</button>
+    <button onclick="location.href='/problem/2'">Problem 2</button>
+    <button onclick="location.href='/problem/3'">Problem 3</button>
+    <button onclick="location.href='/problem/4'">Problem 4</button>
+  </div>
+  <div class="buttons-container">
+    <button onclick="location.href='/problem/5'">Problem 5</button>
+    <button onclick="location.href='/problem/6'">Problem 6</button>
+    <button onclick="location.href='/problem/7'">Problem 7</button>
+    <button onclick="checkAdmin()">Secret Code</button>
+  </div>
+  <script>
+    function checkAdmin(input) {
+      alert('You are not admin');
+    }
+  </script>
+</body>
+</html>
