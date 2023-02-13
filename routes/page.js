@@ -16,6 +16,9 @@ router.post("/code", (req,res) => {
             </script>`
           );
     }
+    else if(code == '284') {
+      res.sendFile(path.join(__dirname, "../views/284.html"));
+    }
     else if(code == 'INE') {
       res.sendFile(path.join(__dirname, "../views/ine.html"));
     }
