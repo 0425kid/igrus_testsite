@@ -13,13 +13,20 @@
   <form action="/problem/check" method="post">
     <input type="hidden" name="number" value="3">
     <div class="input-container">
-      <input class="input-letter" name="a" maxlength="1">
-      <input class="input-letter" name="b" maxlength="1">
-      <input class="input-letter" name="c" maxlength="1">
-      <input class="input-letter" name="d" maxlength="1">
+      <input class="input-letter" name="a" maxlength="1" oninput="numberMaxLength(this);">
+      <input class="input-letter" name="b" maxlength="1" oninput="numberMaxLength(this);">
+      <input class="input-letter" name="c" maxlength="1" oninput="numberMaxLength(this);">
+      <input class="input-letter" name="d" maxlength="1" oninput="numberMaxLength(this);">
       <input type="submit" value="SEND">
     </div>
   </form>
+  <script>
+    function numberMaxLength(e){
+      if(e.value.length > e.maxLength){
+        e.value = e.value.slice(0, e.maxLength);
+      }
+    }
+  </script>
   
   
 
