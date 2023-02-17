@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require("path")
 
 router.get("/", (req,res) => {
-  res.sendFile(path.join(__dirname, "../views/testtest.html"));
+  res.sendFile(path.join(__dirname, "../views/problem.html"));
 });
 
 router.get("/:id", (req, res) => {

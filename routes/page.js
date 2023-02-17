@@ -7,6 +7,10 @@ const path = require("path")
 // 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(user);
 // }
 
+router.get('/test', (req, res) => {
+  res.sendFile(path.join(__dirname, "../views/testtest.html"));
+})
+
 router.get("/", (req,res) => {
   res.sendFile(path.join(__dirname, "../views/home.html"));
 
