@@ -1,9 +1,23 @@
 const express = require("express");
+const userAgent = require('user-agent');
 const router = express.Router();
 const path = require("path")
 
+// function isMobile(user){
+// 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(user);
+// }
+
 router.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "../views/home.html"));
+  res.sendFile(path.join(__dirname, "../views/home.html"));
+
+  // const ua = userAgent.parse(req.headers['user-agent']);
+  // console.log(ua);
+  // console.log(ua.full);
+  // if (/mobile|android/i.test(ua.full)) {
+  //   res.send('You are accessing this page on a mobile device. Some features may not work as expected.');
+  // } else {
+  //   res.send('You are accessing this page on a desktop device.');
+  // }
 });
 
 router.post("/code", (req,res) => {

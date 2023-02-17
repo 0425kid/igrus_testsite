@@ -8,5 +8,11 @@
     <input type="text" class="input-box" name="code" placeholder="Type the code" maxlength="10">
     <input type="submit" value="SEND">
   </form>
+  <script>
+    const user = navigator.userAgent;
+    if (/mobile|android/i.test(user)) {
+      alert('You are accessing this page on a mobile device. Some features may not work as expected.');
+    }
+  </script>
 </body>
 </html>

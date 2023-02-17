@@ -67,3 +67,17 @@ input[type="submit"] {
   font-size: 64px;
 }
 
+.problem-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1040px;
+}
+
+.problem-buttons button {
+  width: 250px;
+  height: 100px;
+  margin: 5px;
+}
+
+
