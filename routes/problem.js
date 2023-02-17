@@ -11,6 +11,10 @@ router.get("/:id", (req, res) => {
   res.sendFile(path.join(__dirname, `../views/problems/${id}.html`))
 })
 
+router.get("/check", (req,res) => {
+  res.send('SUCCESS')
+})
+
 router.post("/check", (req,res) => {
   const answer = req.body;
   const problem_num = answer.number;
