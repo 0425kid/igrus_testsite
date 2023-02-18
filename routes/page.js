@@ -43,6 +43,9 @@ router.post("/code", (req,res) => {
     else if(code == 'YEOJUN8771') {
       res.sendFile(path.join(__dirname, "../views/yeojun.html"));
     }
+    else if(code == 'JONGIN') {
+      res.sendFile(path.join(__dirname, "../views/jongin.html"));
+    }
     else {
         res.send(
             `<script>
