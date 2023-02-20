@@ -12,17 +12,12 @@ router.get('/test', (req, res) => {
 })
 
 router.get("/", (req,res) => {
-  res.sendFile(path.join(__dirname, "../views/home.html"));
-
-  // const ua = userAgent.parse(req.headers['user-agent']);
-  // console.log(ua);
-  // console.log(ua.full);
-  // if (/mobile|android/i.test(ua.full)) {
-  //   res.send('You are accessing this page on a mobile device. Some features may not work as expected.');
-  // } else {
-  //   res.send('You are accessing this page on a desktop device.');
-  // }
+  res.sendFile(path.join(__dirname, "../views/wait.html"));
 });
+
+// router.get("/", (req,res) => {
+//   res.sendFile(path.join(__dirname, "../views/home.html"));
+// });
 
 router.post("/code", (req,res) => {
     const code = req.body.code.toUpperCase()
