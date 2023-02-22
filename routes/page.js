@@ -12,12 +12,8 @@ router.get('/test', (req, res) => {
 })
 
 router.get("/", (req,res) => {
-  res.sendFile(path.join(__dirname, "../views/wait.html"));
+  res.sendFile(path.join(__dirname, "../views/home.html"));
 });
-
-// router.get("/", (req,res) => {
-//   res.sendFile(path.join(__dirname, "../views/home.html"));
-// });
 
 router.post("/code", (req,res) => {
     const code = req.body.code.toUpperCase()

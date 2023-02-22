@@ -11,3 +11,10 @@ Array.from(myInputs).forEach(function(myInput) {
     numberMaxLength(this);
   });
 });
+
+function checkAdmin(){
+  if(document.cookie === ''){
+    alert('You are not Admin!');
+  }
+  else alert('Great! You are admin!');
+}

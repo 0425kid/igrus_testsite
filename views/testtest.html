@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+	<title>Tree Visual</title>
+	<style>
+		/* Style for the boxes */
+		.box {
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			background-color: #72BF44;
+			color: white;
+			text-align: center;
+			line-height: 60px;
+			font-weight: bold;
+			margin: 10px;
+		}
 
-    </head>
-    <body>
-        <button onclick="playSound()">Click me!</button>
-        <audio id="sound" src="audio/yeojun.mp3"></audio>
-        <script>
-            function playSound() {
-                var audio = document.getElementById("sound");
-                audio.play();
-            }
-        </script>
-    </body>
+		/* Style for the lines */
+		.line {
+			display: inline-block;
+			border-left: 2px solid black;
+			height: 60px;
+			margin-left: -1px;
+		}
+
+		/* Style for the first line */
+		.first-line {
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">1</div>
+	<div class="line first-line"></div>
+	<div class="box">2</div>
+	<div class="line"></div>
+	<div class="box">4</div>
+	<div class="line"></div>
+	<div class="box">8</div>
+	<div class="box">12</div>
+	<div class="line"></div>
+	<div class="box">9</div>
+	<div class="line first-line"></div>
+	<div class="box">3</div>
+	<div class="line"></div>
+	<div class="box">6</div>
+	<div class="line"></div>
+	<div class="box">7</div>
+	<div class="line"></div>
+	<div class="box">5</div>
+	<div class="line"></div>
+	<div class="box">10</div>
+	<div class="box">11</div>
+</body>
 </html>
