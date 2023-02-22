@@ -31,6 +31,6 @@ function checkCoockieCount(){
 }
 
 function getAdminCookie(){
-  document.cookie = "adminCookie=Admin; max-age=30000; path=/; httpOnly=true;"
+  document.cookie = "adminCookie=Admin; max-age=30000; path=/;"
   alert('You got admin cookie!')
 }
