@@ -22,7 +22,8 @@ app.use('/audio', express.static(__dirname + '/audio'))
 
 app.use('/', require('./routes/page.js'))
 app.use('/problem', require('./routes/problem.js'))
-app.use('/cookie', require('./routes/cookie.js'))
+
+app.use('/unity', express.static(__dirname+'/public'));
 
 http.listen(port, () => {
   console.log(`server listening on *:${port}`)

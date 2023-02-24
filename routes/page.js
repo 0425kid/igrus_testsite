@@ -15,6 +15,10 @@ router.get("/", (req,res) => {
   res.sendFile(path.join(__dirname, "../views/home.html"));
 });
 
+router.get("/meta", (req,res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
 router.post("/code", (req,res) => {
     const code = req.body.code.toUpperCase()
     
