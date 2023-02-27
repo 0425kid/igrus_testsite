@@ -6,7 +6,8 @@ let answer_dict={
   1: 'CJPJ',
   2: '309',
   3: '9GU8',
-  4: '8OP9A'
+  4: '8OP9A',
+  7: '128941011526731'
 }
 
 function checkAnswer(problem_num, guess){

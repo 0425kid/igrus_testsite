@@ -46,6 +46,18 @@ body {
   font-size: 32px;
 }
 
+.input-word {
+  background-color: black;
+  color:green;
+  width: 300px;
+  height: 60px;
+  border: none;
+  border-bottom: 5px solid white;
+  text-align: center;
+  margin: 20px;
+  font-size: 32px;
+}
+
 input[type="submit"] {
   background-color: black;
   color: white;
@@ -86,5 +98,9 @@ input[type="submit"] {
 
 #cookie_for_admin {
   width:100px; height:100px;
+}
+
+.tree_example {
+  font-size: 24px;
 }
 
