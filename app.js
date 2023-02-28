@@ -3,6 +3,8 @@ const app = express()
 var http     = require('http').Server(app) //create a http web server using the http library
 const port = 3000
 
+const path = require("path")
+
 var cors = require('cors');
 app.use(cors())
 
@@ -24,6 +26,16 @@ app.use('/', require('./routes/page.js'))
 app.use('/problem', require('./routes/problem.js'))
 
 app.use('/unity', express.static(__dirname+'/public'));
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, '../views/404.html'));
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).sendFile(path.join(__dirname, '../views/404.html'));
+});
+
 
 http.listen(port, () => {
   console.log(`server listening on *:${port}`)

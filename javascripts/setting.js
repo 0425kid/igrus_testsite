@@ -6,9 +6,16 @@ function numberMaxLength(input){
 
 const myInputs = document.getElementsByClassName('input-letter');
 
-Array.from(myInputs).forEach(function(myInput) {
+
+
+Array.from(myInputs).forEach(function(myInput, index) {
   myInput.addEventListener("input", function() {
     numberMaxLength(this);
+    if (this.value.length >= this.maxLength) {
+      if (index < myInputs.length - 1) {
+        myInputs[index + 1].focus();
+      }
+    }
   });
 });
 
