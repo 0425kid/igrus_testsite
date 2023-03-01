@@ -7,7 +7,8 @@ let answer_dict={
   2: '309',
   3: '9GU8',
   4: '8OP9A',
-  7: '128941011526731'
+  6: '8VM2',
+  7: '812492105111673'
 }
 
 function checkAnswer(parsed_answer, res){
@@ -49,7 +50,7 @@ router.get("/", (req,res) => {
 });
 
 router.get("/check", (req,res) => {
-  res.send('SUCCESS')
+  res.sendFile(path.join(__dirname, "../views/corrects/5.html"));
 })
 
 router.get("/:id", (req, res) => {

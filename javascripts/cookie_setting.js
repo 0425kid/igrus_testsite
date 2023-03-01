@@ -26,7 +26,7 @@ function checkCoockieCount(){
     alert(`Not enough cookie! You need ${1000000-cookie} more`);
   }
   else {
-    window.location.href = '54.83.101.17:3000/problem/check';
+    window.location.href = '/problem/check';
   }
 }
 
