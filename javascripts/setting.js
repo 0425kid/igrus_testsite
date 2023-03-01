@@ -4,23 +4,6 @@ function numberMaxLength(input){
   }
 }
 
-function generateInputLetters(container, letterNum, namePrefix) {
-  for (let i = 0; i < letterNum; i++) {
-    const input = document.createElement('input');
-    input.className = 'input-letter';
-    input.type = 'text';
-    input.maxLength = 1;
-    input.name = `${namePrefix}${i + 1}`;
-    input.addEventListener('input', function() {
-      numberMaxLength(this);
-      if (this.value.length === this.maxLength && i < letterNum - 1) {
-        container.children[i + 1].focus();
-      }
-    });
-    container.appendChild(input);
-  }
-}
-
 const myInputs = document.getElementsByClassName('input-letter');
 
 
