@@ -8,7 +8,7 @@ const answer_dict={
   3: '9GU8',
   4: '8OP9A',
   6: '8VM2',
-  7: '812492105111673'
+  7: '812492105111637'
 }
 
 function checkAnswer(parsed_answer, res){
