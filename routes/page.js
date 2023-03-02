@@ -3,9 +3,25 @@ const userAgent = require('user-agent');
 const router = express.Router();
 const path = require("path")
 
-// function isMobile(user){
-// 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(user);
-// }
+let code_list={
+  'IGRUS': '../views/problem.html',
+  '284': '../views/284.html',
+  'INE': '../views/ine.html',
+  'YEOJUN8771': '../views/yeojun.html',
+  'JONGIN': '../views/jongin.html',
+  '7PUG': '../views/prize/part1.html',
+  'H54A': '../views/prize/part2.html'
+}
+
+function checkCode(code) {
+  console.log(code);
+  try{
+    return code_list[code]
+  }
+  catch(err){
+    return err;
+  }
+}
 
 router.get('/test', (req, res) => {
   res.sendFile(path.join(__dirname, "../views/testtest.html"));
@@ -20,35 +36,18 @@ router.get("/meta", (req,res) => {
 });
 
 router.post("/code", (req,res) => {
-    const code = req.body.code.toUpperCase()
-    
-    if(code == 'IGRUS') {
-        res.send(
-            `<script>
-              location.href='/problem';
-            </script>`
-          );
-    }
-    else if(code == '284') {
-      res.sendFile(path.join(__dirname, "../views/284.html"));
-    }
-    else if(code == 'INE') {
-      res.sendFile(path.join(__dirname, "../views/ine.html"));
-    }
-    else if(code == 'YEOJUN8771') {
-      res.sendFile(path.join(__dirname, "../views/yeojun.html"));
-    }
-    else if(code == 'JONGIN') {
-      res.sendFile(path.join(__dirname, "../views/jongin.html"));
-    }
-    else {
-        res.send(
-            `<script>
-              alert('invalidate code : ${code}');
-              location.href='/';
-            </script>`
-          );
-    }
+  const code = req.body.code.toUpperCase()
+  try{
+    res.sendFile(path.join(__dirname, checkCode(code)))
+  }
+  catch(err){
+    res.send(
+      `<script>
+        alert('invalidate code : ${code}');
+        location.href='/';
+      </script>`
+    );
+  }
 });
 
 

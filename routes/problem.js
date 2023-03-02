@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const path = require("path")
 
-let answer_dict={
+const answer_dict={
   1: 'CJPJ',
   2: '309',
   3: '9GU8',

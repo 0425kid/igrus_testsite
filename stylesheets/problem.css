@@ -105,3 +105,16 @@ input[type="submit"] {
   font-size: 32px;
 }
 
+.js_code {
+  background-color: black;
+  color: white;
+  border: 5px solid white;
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  width: 400px;
+  height: 250px;
+  text-align: center;
+  word-wrap: break-word;
+}
