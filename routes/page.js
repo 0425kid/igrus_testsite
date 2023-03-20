@@ -5,10 +5,10 @@ const path = require("path")
 
 let code_list={
   'IGRUS': '../views/problem.html',
-  '284': '../views/284.html',
-  'INE': '../views/ine.html',
-  'YEOJUN8771': '../views/yeojun.html',
-  'JONGIN': '../views/jongin.html',
+  '284': '../views/easter_egg/284.html',
+  'INE': '../views/easter_egg/ine.html',
+  'YEOJUN8771': '../views/easter_egg/yeojun.html',
+  'JONGIN': '../views/easter_egg/jongin.html',
   '7PUG': '../views/prize/part1.html',
   'H54A': '../views/prize/part2.html'
 }
